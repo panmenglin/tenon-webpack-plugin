@@ -1,6 +1,5 @@
 # tenon-webpack-plugin
 
-[![npm][npm-image]][npm-url]
 
 A webpack plugin to build Tenon blocks.
 
