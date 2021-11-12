@@ -17,7 +17,7 @@ export class TenonWebpackPlugin implements WebpackPluginInstance {
   public apply(compiler: Compiler): void {
 
     compiler.hooks.emit.tapAsync(
-      'SumMaoWebpackPlugin',
+      'TenonWebpackPlugin',
       (compilation: Compilation, callback) => {
         const { chunks = [] } = compilation.getStats().toJson();
         const entryFiles: string[] = [];
