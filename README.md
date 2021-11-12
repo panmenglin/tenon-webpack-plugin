@@ -67,3 +67,31 @@ export type PluginOptions = {
 **externals**: Webpack externals related files.
 
 
+### Output
+
+The Tenon entry file (`entry.json`) created by this plugin like this:
+
+```json
+{
+    "js": [
+        "index.min.js"
+    ],
+    "css": [
+        "main.css"
+    ],
+    "library": "Library Name",
+    "publicPath": "http://xxx/xxx",
+    "blocks": [
+        "Item",
+    ],
+    "externals": {
+        "js": [
+            "http://unpkg.com/react@17.0.2/umd/react.production.min.js",
+            "http://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js",
+        ],
+        "css": []
+    }
+}
+```
+
+
