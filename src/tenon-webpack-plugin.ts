@@ -40,7 +40,7 @@ export class TenonWebpackPlugin implements WebpackPluginInstance {
         const content = {
           js: entryFiles.filter((filename) => /.js($|\?)/.test(filename)),
           css: entryFiles.filter((filename) => /.css($|\?)/.test(filename)),
-          library: library!.name,
+          library: library!.name || library,
           publicPath: publicPath,
           ...this.options,
         };
