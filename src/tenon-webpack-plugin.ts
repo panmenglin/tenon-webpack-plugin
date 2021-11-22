@@ -16,9 +16,9 @@ export class TenonWebpackPlugin implements WebpackPluginInstance {
 
   public apply(compiler: Compiler): void {
 
-    compiler.hooks.emit.tapAsync(
+    compiler.hooks.emit.tap(
       'TenonWebpackPlugin',
-      (compilation: Compilation, callback) => {
+      (compilation: Compilation) => {
         const { chunks = [] } = compilation.getStats().toJson();
         const entryFiles: string[] = [];
         const asyncFiles: string[] = [];
@@ -47,8 +47,6 @@ export class TenonWebpackPlugin implements WebpackPluginInstance {
 
         const data = `${JSON.stringify(content, null, 4)}`;
         compilation.assets['entry.json'] = new Source(data)
-
-        callback()
       },
     );
   }

@@ -1,6 +1,6 @@
 {
   "name": "tenon-webpack-plugin",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "author": "panmenglin <max.pan@outlook.com>",
   "description": "A webpack plugin to build Tenon blocks",
   "homepage": "",
